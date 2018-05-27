@@ -7,7 +7,7 @@ const route = require("./routes/route");
 
 //databse
 
-mongoose.connect("mongodb://localhost:27017/contactlist");
+mongoose.connect("mongodb://rwrole:rwrole@localhost:27017/mongooset");
 
 mongoose.connection.on("connected",()=>{
   console.log("Connected to database mongodb @ 27017")
@@ -33,7 +33,7 @@ app.use(express.static(__dirname + '/public'));
 app.use("/api", route);
 
 app.get("/", (req,res)=>{
-  res.send("foobar");
+  res.send("doctorapp");
 });
 
 app.listen(port,()=>{
